@@ -26,6 +26,8 @@ $hover-black: #1f2122;
 @import "_misc/fonts.scss";
 @import "_misc/layout.scss";
 
+
+@import "blocks/block.scss";
 @import "blocks/section.scss";
 @import "blocks/hero.scss";
 @import "blocks/header.scss";
@@ -38,6 +40,7 @@ $hover-black: #1f2122;
 @import "blocks/order.scss";
 @import "blocks/form.scss";
 @import "blocks/fixed-menu.scss";
+
 
 
 

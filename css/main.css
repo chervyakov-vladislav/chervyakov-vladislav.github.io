@@ -465,6 +465,14 @@ button {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
+.block {
+  display: block;
+}
+
 .section {
   height: 100vh;
   min-height: 650px;
@@ -520,10 +528,6 @@ button {
   text-transform: lowercase;
 }
 
-.hero__pic {
-  max-width: 100%;
-}
-
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -549,10 +553,6 @@ button {
 
 .header__btn {
   margin-left: 15px;
-}
-
-.header__logo {
-  max-width: 100%;
 }
 
 .nav__list {
@@ -660,6 +660,10 @@ button {
   background: #1f2122;
 }
 
+.btn_anchor {
+  display: block;
+}
+
 .title {
   font-size: 72px;
   font-family: "Gagalin" , Arial, sans-serif;
@@ -733,10 +737,6 @@ button {
 
 .best__piture {
   margin-bottom: 40px;
-}
-
-.best__piture-icon {
-  max-width: 100%;
 }
 
 .best__title {
