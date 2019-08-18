@@ -1,0 +1,48 @@
+.reviews__list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+
+}
+
+.reviews__item {
+    width: 25%;
+    height: 50%;
+    background: center center / cover no-repeat;
+    position: relative;
+    filter: grayscale(100%);
+    &:hover {
+        .reviews__hover {
+            opacity: 1;
+        }
+    }
+}
+
+.reviews__hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#444646, .7);
+    color: #fff;
+    padding: 50px 20px;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+.reviews__title {
+    @include gagalin();
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.reviews__text {
+    @include ubuntu(light);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+//экспортировал обрезанные картинки, наверное это неправильно)
+//никто не заметит

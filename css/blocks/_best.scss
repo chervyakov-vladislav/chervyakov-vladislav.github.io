@@ -1,0 +1,34 @@
+.best {
+    background: url('../img/bg/best-bg.jpg') center center / cover no-repeat;
+}
+
+.best__list {
+    display: flex;
+    margin-top: 50px;
+}
+
+.best__item {
+    flex: 1;
+    margin-right: 35px;
+    text-align: center;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.best__piture {
+    margin-bottom: 40px;
+}
+
+.best__title {
+    font-size: 24px;
+    @include lifehack();
+    margin-bottom: 20px;
+}
+
+.best__desc-text {
+    opacity: .8;
+    @include ubuntu(light); // почему не подключается нужный шрифт?
+    font-size: 14px;
+}

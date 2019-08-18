@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.42;
+    position: relative;
+    @include ubuntu();
+    color: $black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-width: 940px + 20px;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 940px;
+    // padding: 0 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+     }
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}

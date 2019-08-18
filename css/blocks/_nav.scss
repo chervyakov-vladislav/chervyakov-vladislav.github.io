@@ -1,0 +1,44 @@
+
+.nav {
+    margin-right: 15px;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    transition: .5s;
+    &:after {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #fff;
+        margin-left: 16px;
+    }
+    &:last-child {
+        margin-right: 0;
+        &:after {
+            display: none;
+        }
+    }
+    &:hover {
+        .nav__link {
+            color: $orange;   
+        }
+    }
+}
+
+.nav__link {
+    text-decoration: none;
+    font-size: 13px;
+    @include ubuntu(medium);
+    text-transform: uppercase;
+    color: #fff;
+}

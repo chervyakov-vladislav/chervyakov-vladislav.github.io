@@ -1,0 +1,18 @@
+.arrow-scroll {
+    width: 29px;
+    height: 14px;
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    background: url(../img/icons/arrow-scroll.svg) center center / contain no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    &:focus {
+        outline: none;
+    }
+    transition: .5s;
+    &:hover {
+        bottom: 45px;
+        transition: .5s;
+    }
+}
