@@ -142,6 +142,7 @@ sup {
  */
 img {
   border-style: none;
+  max-width: 100%;
 }
 
 /* Forms
@@ -465,14 +466,6 @@ button {
   color: inherit;
 }
 
-img {
-  max-width: 100%;
-}
-
-.block {
-  display: block;
-}
-
 .section {
   height: 100vh;
   min-height: 650px;
@@ -609,6 +602,7 @@ img {
 }
 
 .btn {
+  display: block;
   padding: 10px 16px;
   border-radius: 5px;
   background: #e35028;
