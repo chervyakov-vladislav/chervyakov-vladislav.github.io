@@ -1,8 +1,3 @@
-
-.nav {
-    margin-right: 15px;
-}
-
 .nav__list {
     display: flex;
     align-items: center;
@@ -12,7 +7,7 @@
     display: flex;
     align-items: center;
     margin-right: 16px;
-    transition: .5s;
+    
     &:after {
         content: '';
         display: block;
@@ -41,4 +36,5 @@
     @include ubuntu(medium);
     text-transform: uppercase;
     color: #fff;
+    transition: .3s;
 }

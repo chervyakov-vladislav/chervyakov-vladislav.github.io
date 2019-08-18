@@ -7,11 +7,33 @@
     @include ubuntu(medium);
     font-size: 13px;
     transition: .5s;
+    text-decoration: none;
     &:focus {
         outline: none;
     }
     &:hover {
         background: $hover-orange;
         transition: .5s;
+    }
+
+    &__clear {
+        @include ubuntu(light);
+        font-size: 14px;
+        margin-left: 20px;
+        transition: .5s;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            color: $red;  
+        }
+    }
+
+    &__black {
+        background: #2f3234;
+
+        &:hover {
+            background: $hover-black;  
+        }
     }
 }

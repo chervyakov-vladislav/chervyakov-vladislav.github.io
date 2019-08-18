@@ -26,3 +26,7 @@
     @include lifehack();
     text-transform: lowercase;
 }
+
+.hero__pic {
+    max-width: 100%;
+}

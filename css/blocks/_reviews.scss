@@ -10,10 +10,11 @@
     height: 50%;
     background: center center / cover no-repeat;
     position: relative;
-    filter: grayscale(100%);
+    // filter: grayscale(100%);
     &:hover {
         .reviews__hover {
             opacity: 1;
+            border-radius: 0;
         }
     }
 }
@@ -24,12 +25,20 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(#444646, .7);
+    background: rgba(#444646, .6);
     color: #fff;
     padding: 50px 20px;
     opacity: 0;
     transition: 0.5s;
+    border-radius: 35%;
+    display: flex;
+    align-items: center;
+}
 
+.reviews__desc {
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .reviews__title {

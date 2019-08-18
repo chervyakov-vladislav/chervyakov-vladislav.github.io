@@ -4,7 +4,7 @@
 
 .best__list {
     display: flex;
-    margin-top: 50px;
+    padding-top: 50px;
 }
 
 .best__item {
@@ -19,6 +19,10 @@
 
 .best__piture {
     margin-bottom: 40px;
+}
+
+.best__piture-icon {
+    max-width: 100%;
 }
 
 .best__title {
