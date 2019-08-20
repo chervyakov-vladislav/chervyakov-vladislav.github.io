@@ -71,6 +71,8 @@ pre {
  */
 a {
   background-color: transparent;
+  color: #fff;
+  text-decoration: none;
 }
 
 /**
@@ -997,4 +999,111 @@ button {
 
 .fixed-menu__active {
   border: 1px solid #fff;
+}
+
+.team {
+  background: url("../img/bg/team-bg.jpg") center center/cover no-repeat;
+  position: relative;
+}
+
+.team__bg {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: rgba(47, 50, 52, 0.93);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 110px 90px;
+}
+
+.accordeon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.accordeon__item {
+  color: #fff;
+  margin-bottom: 35px;
+}
+
+.accordeon__item:last-child {
+  margin-bottom: 0;
+}
+
+.accordeon__active .accordeon__title:before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  bottom: 5px;
+}
+
+.accordeon__active .accordeon__title {
+  color: #f9b43b;
+}
+
+.accordeon__title {
+  font-family: "Gagalin" , Arial, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  padding-left: 20px;
+  position: relative;
+}
+
+.accordeon__title:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #f9b43b;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.accordeon__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+}
+
+.accordeon__img {
+  max-width: 100px;
+  width: 100%;
+  height: 100px;
+  border-radius: 50%;
+  background: url("./../img/content/team/aphex.jpg") center center/cover no-repeat;
+  margin-right: 20px;
+}
+
+.accordeon__text {
+  font-size: 14px;
+}
+
+.accordeon__subtitle {
+  font-family: "Ubuntu" , Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.accordeon__text {
+  font-family: "Ubuntu" , Arial, sans-serif;
+  font-weight: 300;
+  max-width: 220px;
 }

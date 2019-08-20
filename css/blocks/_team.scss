@@ -1,0 +1,16 @@
+.team {
+    background: url('../img/bg/team-bg.jpg') center center / cover no-repeat;
+    position: relative;
+}
+
+.team__bg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: rgba($black, .93);
+    display: flex;
+    flex-direction: column;
+    padding: 110px 90px;
+}
