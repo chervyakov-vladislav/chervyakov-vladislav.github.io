@@ -1152,9 +1152,9 @@ button {
 }
 
 .menu__title {
-  width: 50%;
+  width: 35%;
   text-align: center;
-  margin-bottom: 300px;
+  margin-bottom: 350px;
 }
 
 .menu__nav {
@@ -1162,7 +1162,7 @@ button {
   right: 0;
   top: 0;
   height: 100%;
-  max-width: 50%;
+  max-width: 65%;
 }
 
 .menu__list {
