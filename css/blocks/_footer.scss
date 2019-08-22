@@ -1,0 +1,35 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 60px;
+    height: 100%;
+    background: url(./../img/bg/contacts-texture.jpg) center center / cover no-repeat;
+}
+
+
+.footer__content {
+    display: flex;
+}
+
+.footer__contacts {
+    width: 50%;
+}
+
+.footer__adress {
+    @include ubuntu(light);
+    font-size: 14px;
+    color: #fff;
+    padding-top: 10px;
+}
+
+.footer__phone {
+    @include ubuntu(bold);
+    font-size: 14px;
+    color: $orange;
+}
+
+.footer__socials {
+    width: 50%;
+}

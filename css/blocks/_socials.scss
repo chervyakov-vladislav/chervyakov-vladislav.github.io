@@ -1,0 +1,19 @@
+.socials {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20gopx;
+}
+
+.socials__item {
+    margin-right: 15px;
+    opacity: .3;
+    transition: .3s;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
