@@ -1306,7 +1306,7 @@ button {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding-top: 20gopx;
+  padding-top: 20px;
 }
 
 .socials__item {
