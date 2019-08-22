@@ -24,6 +24,11 @@
     .accordeon__title {
         color: $yellow;
     }
+
+    .accordeon__desc {
+        height: 100%;
+        overflow: visible;
+    }
 }
 
 .accordeon__title {
@@ -50,6 +55,8 @@
 .accordeon__desc {
     display: flex;
     padding-top: 20px;
+    height: 0;
+    overflow: hidden;
 }
 
 .accordeon__img {

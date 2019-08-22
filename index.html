@@ -27,7 +27,9 @@
     <section class="section section_none-centered hero">
         <div class="container hero__container">
             <header class="header">
-                <img class="logo" src="./img/icons/logo.svg" alt="Mr. Burger">
+                <svg class="logo">
+                    <use xlink:href="./img/icons/sprite.svg#logo"></use>
+                </svg>
                 <div class="header__buttons">
                     <nav class="nav">
                         <ul class="nav__list">
@@ -70,8 +72,10 @@
             </div>
    
         </div>
-        <a href="#" class="arrow-scroll">
-            <!-- <img src="./img/icons/arrow-scroll.svg" alt="scroll"> -->
+        <a href="#" class="arrow-scrollbtn">
+            <svg class="arrow-scroll">
+                <use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
+            </svg>
         </a>
     </section>
 
@@ -83,7 +87,9 @@
             <ul class="best__list">
                 <li class="best__item">
                     <div class="best__piture">
-                        <img src="./img/icons/meat.svg" alt="meat" class="best__picture-icon">
+                        <svg class="meat">
+                            <use xlink:href="./img/icons/sprite.svg#meat"></use>
+                        </svg>
                     </div>
                     <div class="best__desc">
                         <div class="best__title">100% свежее мясо</div>
@@ -96,7 +102,9 @@
                 </li>
                 <li class="best__item">
                     <div class="best__piture">
-                        <img src="./img/icons/hand.svg" alt="meat" class="best__picture-icon">
+                        <svg class="hand">
+                            <use xlink:href="./img/icons/sprite.svg#hand"></use>
+                        </svg>
                     </div>
                     <div class="best__desc">
                         <div class="best__title">Ручная  сборка</div>
@@ -109,7 +117,9 @@
                 </li>
                 <li class="best__item">
                     <div class="best__piture">
-                        <img src="./img/icons/natural.svg" alt="meat" class="best__picture-icon">
+                        <svg class="natural">
+                            <use xlink:href="./img/icons/sprite.svg#natural"></use>
+                        </svg>
                     </div>
                     <div class="best__desc">
                         <div class="best__title">Натуральные ингредиенты</div>
@@ -152,17 +162,100 @@
                     <a href="#" class="accordeon__title">
                         Ричард Джеймс
                     </a>
+                    <div class="accordeon__desc">
+                        <div class="accordeon__img"></div>
+                        <div class="accordeon__text">
+                            <div class="accordeon__subtitle">
+                                Оператор
+                           </div>
+                            <div class="accordeon__txt">
+                                <p>
+                                    С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="accordeon__item"> 
                     <a href="#" class="accordeon__title">
                         Джейк Финн
-                    </a></li>
+                    </a>
+                    <div class="accordeon__desc">
+                        <div class="accordeon__img"></div>
+                        <div class="accordeon__text">
+                            <div class="accordeon__subtitle">
+                                Оператор
+                            </div>
+                            <div class="accordeon__txt">
+                                <p>
+                                    С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <li class="accordeon__item">
                     <a href="#" class="accordeon__title">
                         Николай Иванов
                     </a>
+                    <div class="accordeon__desc">
+                        <div class="accordeon__img"></div>
+                        <div class="accordeon__text">
+                            <div class="accordeon__subtitle">
+                                Оператор
+                            </div>
+                            <div class="accordeon__txt">
+                                <p>
+                                    С радостью поможет подобрать идеальный бургер и оформить заказ.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
+        </div>
+    </section>
+
+    <section class="section menu">
+        <div class="menu__title">
+            <h2 class="title title_color_white">Меню</h2>
+        </div>
+        <div class="menu__nav">
+                <ul class="menu__list">
+                    <li class="menu__item menu__item_active">
+                        <h3 class="menu__item_title" style="background-image: url('./img/content/menu/b1.jpg') ">
+                            Для мясоедов
+                        </h3>
+                        <div class="menu__item_text">
+                            <p>
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <h3 class="menu__item_title" style="background-image: url('./img/content/menu/b2.jpg')">
+                            Вегетарианское
+                        </h3>
+                        <div class="menu__item_text">
+                            <p>
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <h3 class="menu__item_title" style="background-image: url('./img/content/menu/b3.jpg')">
+                            Диетическое
+                        </h3>
+                        <div class="menu__item_text">
+                            <p>
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
         </div>
     </section>
 

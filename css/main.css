@@ -680,14 +680,13 @@ button {
   text-align: center;
 }
 
-.arrow-scroll {
+.arrow-scrollbtn {
   max-width: 100%;
   width: 29px;
   height: 14px;
   display: block;
   position: absolute;
   bottom: 50px;
-  background: url(../img/icons/arrow-scroll.svg) center center/contain no-repeat;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -697,11 +696,11 @@ button {
   transition: .5s;
 }
 
-.arrow-scroll:focus {
+.arrow-scrollbtn:focus {
   outline: none;
 }
 
-.arrow-scroll:hover {
+.arrow-scrollbtn:hover {
   bottom: 45px;
   -webkit-transition: .5s;
   -o-transition: .5s;
@@ -1057,6 +1056,11 @@ button {
   color: #f9b43b;
 }
 
+.accordeon__active .accordeon__desc {
+  height: 100%;
+  overflow: visible;
+}
+
 .accordeon__title {
   font-family: "Gagalin" , Arial, sans-serif;
   font-size: 14px;
@@ -1085,6 +1089,8 @@ button {
   display: -ms-flexbox;
   display: flex;
   padding-top: 20px;
+  height: 0;
+  overflow: hidden;
 }
 
 .accordeon__img {
@@ -1110,4 +1116,115 @@ button {
   font-family: "Ubuntu" , Arial, sans-serif;
   font-weight: 300;
   max-width: 220px;
+}
+
+.logo {
+  width: 98.265px;
+  height: 74.317px;
+}
+
+.arrow-scroll {
+  width: 28.685px;
+  height: 14.479px;
+}
+
+.meat {
+  width: 96.428px;
+  height: 89.246px;
+}
+
+.hand {
+  width: 73px;
+  height: 85.875px;
+}
+
+.natural {
+  width: 88px;
+  height: 75.534px;
+}
+
+.menu {
+  background: url("./../img/bg/menu-bg.jpg") center center/cover no-repeat;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__title {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 300px;
+}
+
+.menu__nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  max-width: 50%;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__item_active .menu__item_text {
+  overflow: visible;
+  width: 100%;
+  padding: 60px 35px;
+}
+
+.menu__item_active .menu__item_title {
+  color: #f9b43b;
+}
+
+.menu__item_title {
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  color: #fff;
+  font-family: "Gagalin" , Arial, sans-serif;
+  background: right center / cover no-repeat;
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  padding-left: 5px;
+  display: block;
+  position: relative;
+}
+
+.menu__item_title:before {
+  content: '';
+  background: rgba(20, 20, 20, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.menu__item_text {
+  overflow: hidden;
+  width: 0;
+  color: #fff;
+  background: rgba(47, 50, 52, 0.93);
+  font-family: "Ubuntu" , Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
 }

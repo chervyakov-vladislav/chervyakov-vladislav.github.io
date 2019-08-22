@@ -1,0 +1,76 @@
+.menu {
+    background: url('./../img/bg/menu-bg.jpg') center center / cover no-repeat;
+    position: relative;
+    display: flex;
+}
+
+.menu__title {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 300px;
+}
+
+.menu__nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    max-width: 50%;
+}
+
+.menu__list {
+    display: flex;
+    height: 100%;
+    
+}
+
+.menu__item {
+    display: flex;
+
+    &_active {
+        .menu__item_text {
+            overflow: visible;
+            width: 100%;
+            padding: 60px 35px;
+        }
+        .menu__item_title {
+            color: $yellow;
+        }
+    }
+}
+
+.menu__item_title {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg); 
+    color: #fff;
+    @include gagalin();
+    background: right center / cover no-repeat;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+    padding-left: 5px;
+    display: block;
+    position: relative;
+
+    &:before {
+        content: '';
+        background: rgba(#141414, .7);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+.menu__item_text {
+    overflow: hidden;
+    width: 0;
+    color: #fff;
+    background: rgba(#2f3234, .93);
+    @include ubuntu(light);
+    font-size: 14px;
+}
