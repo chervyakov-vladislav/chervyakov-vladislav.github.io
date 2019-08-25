@@ -1,3 +1,9 @@
+.nav {
+    @include laptop() {
+        display: none;
+    }
+}
+
 .nav__list {
     display: flex;
     align-items: center;
@@ -6,16 +12,16 @@
 .nav__item {
     display: flex;
     align-items: center;
-    margin-right: 16px;
+    margin-right: rem(16px);
     
     &:after {
         content: '';
         display: block;
-        width: 4px;
-        height: 4px;
+        width: rem(4px);
+        height: rem(4px);
         border-radius: 50%;
         background: #fff;
-        margin-left: 16px;
+        margin-left: rem(16px);
     }
     &:last-child {
         margin-right: 0;
@@ -32,7 +38,7 @@
 
 .nav__link {
     text-decoration: none;
-    font-size: 13px;
+    font-size: rem(13px);
     @include ubuntu(medium);
     text-transform: uppercase;
     color: #fff;

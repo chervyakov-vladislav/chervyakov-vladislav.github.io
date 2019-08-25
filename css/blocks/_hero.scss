@@ -5,18 +5,43 @@
 
 .hero__container {
     height: 100%;
-
 }
 
 .hero__content {
     display: flex;
     align-items: center;
     flex: .8;
+
+    &_picture {
+        max-height: 370px;
+
+        @include tablets() {
+            padding: 0 25%;
+            text-align: center;
+        }
+    }
+
+    @include tablets() {
+        flex-direction: column;
+    }
+}
+
+.hero__pic {
+    @include tablets() {
+        max-width: 80%;
+    }
 }
 
 .hero__desc {
-    padding-top: 85px;
-    margin-left: 20px;
+    padding-top: rem(85px);
+    margin-left: rem(20px);
+
+    @include tablets() {
+        padding-top: rem(25px);
+        margin: 0;
+        text-align: center;
+        max-width: rem(440px);
+    }
 }
 
 .hero__subtitle {

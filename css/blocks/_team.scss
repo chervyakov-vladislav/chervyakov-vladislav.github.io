@@ -13,5 +13,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 110px 90px;
+    padding: rem(110px) rem(90px);
+
+    @include tablets() {
+        width: 100%;
+        text-align: center;
+    }
 }

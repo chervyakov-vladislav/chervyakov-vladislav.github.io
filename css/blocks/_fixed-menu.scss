@@ -1,7 +1,12 @@
 .fixed-menu {
     position: fixed;
-    top:95px;
-    right: 100px;
+    top:rem(95px);
+    right: rem(100px);
+    
+    @include laptop {
+        display: none;
+    }
+    
 }
 
 .fixed-menu__item {
@@ -9,7 +14,7 @@
     height: 16px;
     border-radius: 50%;
     border: 1px solid transparent;
-    margin-bottom: 7px;
+    margin-bottom: rem(7px);
     position: relative;
 
     &:last-child {

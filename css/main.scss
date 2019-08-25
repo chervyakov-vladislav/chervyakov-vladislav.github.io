@@ -19,6 +19,10 @@ $hover-black: #1f2122;
 
 @import "_misc/normalize.scss";
 
+//media
+
+@import "_misc/media.scss";
+
 
 //setups
 
@@ -32,6 +36,7 @@ $hover-black: #1f2122;
 @import "blocks/header.scss";
 @import "blocks/nav.scss";
 @import "blocks/btn.scss";
+@import "blocks/hamburger-menu-link.scss";
 @import "blocks/title.scss";
 @import "blocks/arrow-scrollbtn.scss";
 @import "blocks/best.scss";

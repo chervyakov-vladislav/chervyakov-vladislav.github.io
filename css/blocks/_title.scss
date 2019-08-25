@@ -2,7 +2,7 @@
     font-size: 72px;
     @include gagalin();
     color: $yellow;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
     line-height: 1;
 
     &_color_black {

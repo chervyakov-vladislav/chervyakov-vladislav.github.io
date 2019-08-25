@@ -1,12 +1,12 @@
 .btn {
     display: block;
-    padding: 10px 16px;
-    border-radius: 5px;
+    padding: rem(10px) rem(16px);
+    border-radius: rem(5px);
     background: $red;
     text-transform: uppercase;
     color: #fff;
     @include ubuntu(medium);
-    font-size: 13px;
+    font-size: rem(13px);
     transition: .5s;
     text-decoration: none;
     &:focus {
@@ -19,8 +19,8 @@
 
     &__clear {
         @include ubuntu(light);
-        font-size: 14px;
-        margin-left: 20px;
+        font-size: rem(14px);
+        margin-left: rem(20px);
         transition: .5s;
         &:focus {
             outline: none;
@@ -32,6 +32,10 @@
 
     &__black {
         background: #2f3234;
+
+        @include tablets {
+            margin: 0 auto;
+        }
 
         &:hover {
             background: $hover-black;  

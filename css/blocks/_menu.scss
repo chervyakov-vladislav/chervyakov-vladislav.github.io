@@ -9,6 +9,10 @@
     position: absolute;
     top: 25%;
     left: 15%;
+
+    @include tablets {
+        top: 15%;
+    }
 }
 
 // .menu__nav {
@@ -32,7 +36,7 @@
 //         .menu__item_text {
 //             overflow: visible;
 //             width: 100%;
-//             padding: 60px 35px;
+//             padding: rem(60px) rem(35px);
 //         }
 //         .menu__item_title {
 //             color: $yellow;
@@ -46,10 +50,10 @@
 //     color: #fff;
 //     @include gagalin();
 //     background: right center / cover no-repeat;
-//     font-size: 40px;
+//     font-size: rem(40px);
 //     margin: 0;
 //     text-align: center;
-//     max-width: 80px;
+//     max-width: rem(80px);
 //     width: 100%;
 //     align-items: center;
 //     display: block;
@@ -75,5 +79,5 @@
 //     color: #fff;
 //     background: rgba(#2f3234, .93);
 //     @include ubuntu(light);
-//     font-size: 14px;
+//     font-size: rem(14px);
 // }

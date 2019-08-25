@@ -9,12 +9,12 @@
     }
 
     &__trigger {
-        max-width: 80px;
+        max-width: rem(80px);
         width: 100%;
         justify-content: center;
         background: right center / cover no-repeat;
         position: relative;
-        padding-bottom: 20px;
+        padding-bottom: rem(20px);
 
         &:before {
             content: '';
@@ -36,19 +36,23 @@
         transform: rotate(180deg); 
         color: #fff;
         justify-content: center;
-        line-height: 55px;
-        padding-left: 10px;
+        line-height: rem(55px);
+        padding-left: rem(10px);
     }
 
     &__wrap-content {
-        max-width: 540px;
+        max-width: rem(540px);
         overflow: hidden;
         width: 0;
+
+        @include tablets {
+            max-width: initial;
+        }
     }
 
     &__content {
         background-color: rgba(#2f3234, .93);
-        padding: 65px 35px;
+        padding: rem(65px) rem(35px);
         p {
             color: #fff;
             @include ubuntu(light);
@@ -65,5 +69,9 @@
 
     .vertical-accordeon__wrap-content {
         width: 100%;
+    }
+
+    @include tablets() {
+        
     }
 }
