@@ -738,6 +738,13 @@ button {
   outline: none;
 }
 
+.btn:hover {
+  background: #c1401e;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
 .btn:hover:before {
   -webkit-animation: light .7s;
   animation: light .7s;
