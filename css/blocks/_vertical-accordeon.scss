@@ -1,0 +1,69 @@
+.vertical-accordeon {
+    height: 100%;
+    position: absolute;
+    right: 0;
+
+    &__trigger, &__list, &__item, &__wrap-content, &__content {
+        display: flex;
+        height: inherit;
+    }
+
+    &__trigger {
+        max-width: 80px;
+        width: 100%;
+        justify-content: center;
+        background: right center / cover no-repeat;
+        position: relative;
+        padding-bottom: 20px;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(#141414, .7);
+        }
+    }
+
+    &__title {
+        @include gagalin();
+        font-size: 40px;
+        text-align: center;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg); 
+        color: #fff;
+        justify-content: center;
+        line-height: 55px;
+        padding-left: 10px;
+    }
+
+    &__wrap-content {
+        max-width: 540px;
+        overflow: hidden;
+        width: 0;
+    }
+
+    &__content {
+        background-color: rgba(#2f3234, .93);
+        padding: 65px 35px;
+        p {
+            color: #fff;
+            @include ubuntu(light);
+            font-size: 14px;
+        }
+    }
+
+}
+
+.vertical-accordeon__item_active {
+    .vertical-accordeon__title {
+        color: $yellow;
+    }
+
+    .vertical-accordeon__wrap-content {
+        width: 100%;
+    }
+}
