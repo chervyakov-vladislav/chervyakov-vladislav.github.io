@@ -45,6 +45,7 @@
     text-decoration: none;
     padding-left: rem(20px);
     position: relative;
+    transition: .3s;
     
     &:before {
         content: '';
@@ -57,6 +58,10 @@
         bottom: 0;
         left: 0;
         transform: translateY(-100%);
+    }
+
+    &:hover {
+        color: $yellow;
     }
 }
 

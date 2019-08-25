@@ -682,7 +682,7 @@ button {
 }
 
 .btn {
-  display: block;
+  display: inline-block;
   padding: 0.625rem 1rem;
   border-radius: 0.3125rem;
   background: #e35028;
@@ -695,17 +695,52 @@ button {
   -o-transition: .5s;
   transition: .5s;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-transform: translateX(-4em) skewX(-45deg);
+  -ms-transform: translateX(-4em) skewX(-45deg);
+  transform: translateX(-4em) skewX(-45deg);
+}
+
+@-webkit-keyframes light {
+  from {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+    transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(10em) skewX(-45deg);
+    transform: translateX(10em) skewX(-45deg);
+  }
+}
+
+@keyframes light {
+  from {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+    transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(10em) skewX(-45deg);
+    transform: translateX(10em) skewX(-45deg);
+  }
 }
 
 .btn:focus {
   outline: none;
 }
 
-.btn:hover {
-  background: #c1401e;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+.btn:hover:before {
+  -webkit-animation: light .7s;
+  animation: light .7s;
 }
 
 .btn__clear {
@@ -1351,6 +1386,9 @@ button {
   text-decoration: none;
   padding-left: 1.25rem;
   position: relative;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .accordeon__title:before {
@@ -1366,6 +1404,10 @@ button {
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
+}
+
+.accordeon__title:hover {
+  color: #f9b43b;
 }
 
 .accordeon__desc {
@@ -1536,6 +1578,13 @@ button {
   justify-content: center;
   line-height: 3.4375rem;
   padding-left: 0.625rem;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.vertical-accordeon__title:hover {
+  color: #f9b43b;
 }
 
 .vertical-accordeon__wrap-content {

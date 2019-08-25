@@ -38,6 +38,11 @@
         justify-content: center;
         line-height: rem(55px);
         padding-left: rem(10px);
+        transition: .3s;
+
+        &:hover {
+            color: $yellow;
+        }
     }
 
     &__wrap-content {
