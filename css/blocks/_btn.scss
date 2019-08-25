@@ -6,7 +6,7 @@
     text-transform: uppercase;
     color: #fff;
     @include ubuntu(medium);
-    font-size: rem(13px);
+    font-size: 13px;
     transition: .5s;
     text-decoration: none;
     &:focus {
@@ -19,7 +19,7 @@
 
     &__clear {
         @include ubuntu(light);
-        font-size: rem(14px);
+        font-size: 14px;
         margin-left: rem(20px);
         transition: .5s;
         &:focus {

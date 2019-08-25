@@ -19,6 +19,10 @@
             padding: 0 25%;
             text-align: center;
         }
+
+        @include phones() {
+            padding: 0 10%;
+        }
     }
 
     @include tablets() {
@@ -42,6 +46,12 @@
         text-align: center;
         max-width: rem(440px);
     }
+
+    .title {
+        @include phones {
+            font-size: 58px;
+        }
+    }
 }
 
 .hero__subtitle {
@@ -50,4 +60,8 @@
     line-height: 1;
     @include lifehack();
     text-transform: lowercase;
+
+    @include phones {
+        font-size: 50px;
+    }
 }

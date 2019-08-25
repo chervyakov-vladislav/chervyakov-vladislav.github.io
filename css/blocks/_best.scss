@@ -5,6 +5,11 @@
 .best__list {
     display: flex;
     padding-top: rem(50px);
+
+    @include phones {
+        flex-direction: column;
+        padding-top: 0;
+    }
 }
 
 .best__item {
@@ -15,14 +20,24 @@
     &:last-child {
         margin-right: 0;
     }
+
+    @include phones {
+        margin-right: 0;
+        display: flex;
+        margin-bottom: rem(25px);
+    }
 }
 
 .best__piture {
     margin-bottom: rem(40px);
+
+    @include phones {
+        margin: auto 0;
+    }
 }
 
 .best__title {
-    font-size: rem(24px);
+    font-size: 24px;
     @include lifehack();
     margin-bottom: rem(20px);
 }
@@ -30,5 +45,5 @@
 .best__desc-text {
     opacity: .8;
     @include ubuntu(light); // почему не подключается нужный шрифт?
-    font-size: rem(14px);
+    font-size: 14px;
 }

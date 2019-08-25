@@ -17,4 +17,8 @@
         text-align: center;
     }
 
+    @include phones {
+        font-size: 50px;
+    }
+
 }

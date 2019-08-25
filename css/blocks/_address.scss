@@ -1,11 +1,11 @@
 .address__street {
     @include ubuntu(light);
-    font-size: rem(14px);
+    font-size: 14px;
     color: #fff;
 }
 
 .address__phone {
     @include ubuntu(bold);
-    font-size: rem(14px);
+    font-size: 14px;
     color: $orange;
 }

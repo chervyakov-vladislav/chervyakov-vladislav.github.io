@@ -12,15 +12,33 @@
         justify-content: center;
     }
 
+    @include tablets {
+        max-height: rem(80px);
+    }
+
+    @include phones {
+        max-height: rem(115px);
+    }
 }
 
 
 .footer__content {
     display: flex;
+
+    @include phones {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .footer__contacts {
     width: 50%;
+
+    @include phones {
+        width: 100%;
+        margin-bottom: rem(15px);
+    }
 }
 
 .footer__socials {
@@ -28,4 +46,9 @@
     justify-content: flex-end;
     display: flex;
     align-items: center;
+
+    @include phones {
+        width: 100%;
+        justify-content: center;
+    }
 }

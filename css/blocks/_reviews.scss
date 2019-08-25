@@ -2,11 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-
-
-    @include tablets {
-        height: 200vh;
-    }
 }
 
 .reviews__item {
@@ -77,6 +72,10 @@
 
     @include tablets {
         margin-bottom: 10px;
+    }
+
+    @include phones {
+        display: none;
     }
 }
 
