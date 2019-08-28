@@ -66,6 +66,23 @@
         &:hover {
             background: $hover-black;  
         }
+
+        &_desktop {
+            display: block;
+
+            @include phones {
+                display: none;
+            }
+
+        }
+
+        &_mobile {
+            display: none;
+
+            @include phones {
+                display: block;
+            }
+        }
     }
 
     &_anchor {

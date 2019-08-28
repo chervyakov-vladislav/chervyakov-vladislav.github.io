@@ -549,6 +549,9 @@ button {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -782,6 +785,26 @@ button {
   background: #1f2122;
 }
 
+.btn__black_desktop {
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .btn__black_desktop {
+    display: none;
+  }
+}
+
+.btn__black_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .btn__black_mobile {
+    display: block;
+  }
+}
+
 .btn_anchor {
   display: block;
 }
@@ -894,13 +917,19 @@ button {
   padding-top: 3.125rem;
 }
 
+@media screen and (max-width: 768px) {
+  .best__list {
+    padding-top: 1.875rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .best__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 0;
+    padding-top: 0.625rem;
   }
 }
 
@@ -922,7 +951,9 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 1.5625rem;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin-bottom: 2.8125rem;
   }
 }
 
@@ -936,10 +967,31 @@ button {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .best__desc {
+    max-width: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
 .best__title {
   font-size: 24px;
   font-family: "Lifehack" , Arial, sans-serif;
   margin-bottom: 1.25rem;
+}
+
+@media screen and (max-width: 480px) {
+  .best__title {
+    text-align: left;
+  }
 }
 
 .best__desc-text {
@@ -947,6 +999,12 @@ button {
   font-family: "Ubuntu" , Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+  .best__desc-text {
+    text-align: left;
+  }
 }
 
 .reviews__list {

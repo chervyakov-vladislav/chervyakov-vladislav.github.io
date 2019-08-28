@@ -6,9 +6,13 @@
     display: flex;
     padding-top: rem(50px);
 
+    @include tablets {
+        padding-top: rem(30px);
+    }
+
     @include phones {
         flex-direction: column;
-        padding-top: 0;
+        padding-top: rem(10px);
     }
 }
 
@@ -24,7 +28,8 @@
     @include phones {
         margin-right: 0;
         display: flex;
-        margin-bottom: rem(25px);
+        justify-content: space-around;
+        margin-bottom: rem(45px);
     }
 }
 
@@ -36,14 +41,35 @@
     }
 }
 
+.best__desc {
+
+    @include phones {
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+}
+
+
 .best__title {
     font-size: 24px;
     @include lifehack();
     margin-bottom: rem(20px);
+
+    @include phones {
+        text-align: left;
+    }
 }
+
 
 .best__desc-text {
     opacity: .8;
-    @include ubuntu(light); // почему не подключается нужный шрифт?
+    @include ubuntu(light);
     font-size: 14px;
+
+    @include phones {
+        text-align: left;
+    }
 }
