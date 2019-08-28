@@ -9,8 +9,10 @@
 
 .hero__content {
     display: flex;
-    align-items: center;
     flex: .8;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 720px;
 
     &_picture {
         max-height: 370px;
