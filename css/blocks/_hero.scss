@@ -12,13 +12,13 @@
     flex: .8;
     margin: 0 auto;
     align-items: center;
-    max-width: 720px;
+    max-width: 820px;
 
     &_picture {
-        max-height: 370px;
+        width: 100%;
 
         @include tablets() {
-            padding: 0 25%;
+            padding: 0 20%;
             text-align: center;
         }
 
