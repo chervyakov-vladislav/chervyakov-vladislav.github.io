@@ -13,7 +13,7 @@
 }
 
 .slider__content_picture, .slider__desc {
-    max-width: 460px;
+    max-width: rem(460px);
     width: 100%;
 }
 
@@ -21,10 +21,24 @@
     display: flex;
     height: 100%;
     margin: auto;
+
+    @include tablets() {
+        width: 60%;
+        height: 80%;
+    }
 }
 
 .slider__desc {
     margin-left: rem(20px);
+
+    @include phones() {
+        &>.title {
+            max-width: 272px;
+            margin: 0 auto;
+        }
+    }
+
+    
 
     @include tablets() {
         margin-left: 0;
@@ -39,6 +53,12 @@
     font-size: 14px;
     color: #fff;
     line-height: rem(25px);
+
+    @include tablets() {
+        line-height: rem(20px);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
 .slider__payment {
@@ -58,6 +78,11 @@
 .slider__cost {
     font-size: 71px;
     margin-right: 10px;
+
+    @include tablets() {
+        line-height: 72px;
+    }
+
     @include phones(){
         margin-right: 0;
     }
@@ -100,7 +125,7 @@
     @include tablets(){
         bottom: initial;
         left: initial;
-        top: -10%;
+        top: -7%;
         left: 10%;
     }
 
@@ -197,7 +222,7 @@
     @include tablets(){
         bottom: initial;
         left: initial;
-        top: -10%;
+        top: -7%;
         right: 10%;
     }
 

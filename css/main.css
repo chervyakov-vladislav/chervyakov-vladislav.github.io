@@ -1994,7 +1994,7 @@ button {
 }
 
 .slider__content_picture, .slider__desc {
-  max-width: 460px;
+  max-width: 28.75rem;
   width: 100%;
 }
 
@@ -2006,8 +2006,22 @@ button {
   margin: auto;
 }
 
+@media screen and (max-width: 768px) {
+  .slider__content_picture {
+    width: 60%;
+    height: 80%;
+  }
+}
+
 .slider__desc {
   margin-left: 1.25rem;
+}
+
+@media screen and (max-width: 480px) {
+  .slider__desc > .title {
+    max-width: 272px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2025,6 +2039,14 @@ button {
   font-size: 14px;
   color: #fff;
   line-height: 1.5625rem;
+}
+
+@media screen and (max-width: 768px) {
+  .slider__text {
+    line-height: 1.25rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .slider__payment {
@@ -2052,6 +2074,12 @@ button {
 .slider__cost {
   font-size: 71px;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .slider__cost {
+    line-height: 72px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -2104,7 +2132,7 @@ button {
   .slider__consist {
     bottom: initial;
     left: initial;
-    top: -10%;
+    top: -7%;
     left: 10%;
   }
 }
@@ -2224,7 +2252,7 @@ button {
   .slider__calory {
     bottom: initial;
     left: initial;
-    top: -10%;
+    top: -7%;
     right: 10%;
   }
 }
