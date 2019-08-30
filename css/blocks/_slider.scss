@@ -56,9 +56,9 @@
     line-height: rem(25px);
 
     @include tablets() {
-        line-height: rem(20px);
-        padding-top: 0;
-        padding-bottom: 0;
+        // line-height: rem(20px);
+        // padding-top: 0;
+        // padding-bottom: 0;
     }
 }
 
@@ -81,7 +81,7 @@
     margin-right: 10px;
 
     @include tablets() {
-        line-height: 72px;
+        font-size: 50px;
     }
 
     @include phones(){
@@ -94,6 +94,7 @@
     margin-right: 30px;
     @include phones(){
         margin-right: 10px;
+        font-size: 24px;
     }
 }
 
