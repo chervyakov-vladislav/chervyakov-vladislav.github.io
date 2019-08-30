@@ -2126,7 +2126,7 @@ button {
   .slider__consist {
     bottom: initial;
     left: initial;
-    top: -7%;
+    top: -5%;
     left: 10%;
   }
 }
@@ -2246,7 +2246,7 @@ button {
   .slider__calory {
     bottom: initial;
     left: initial;
-    top: -7%;
+    top: -5%;
     right: 10%;
   }
 }
