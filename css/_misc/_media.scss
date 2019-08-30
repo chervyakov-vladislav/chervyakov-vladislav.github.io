@@ -4,7 +4,7 @@
 
 
 @mixin laptop() {
-    @media screen and (max-width: 940px) {
+    @media screen and (max-width: 1080px) {
         @content;
     }
 }

@@ -89,3 +89,31 @@
         display: block;
     }
 }
+
+.btn__close {
+    display: none;
+
+    @include tablets() {
+        display: block;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 4px;
+        border-radius: 3px;
+        background: #eb8364;
+        transform: rotate(-45deg);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 4px;
+        border-radius: 3px;
+        background: #eb8364;
+        transform: rotate(45deg);
+    }
+}

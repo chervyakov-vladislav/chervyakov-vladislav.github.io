@@ -8,7 +8,7 @@ $ubuntu: "Ubuntu";
 // colors
 
 $orange: #e45028;
-$yellow: #f9b43b;
+$yellow: #f9b43b; 
 $black: #2f3234;
 $red: #e35028;
 $hover-orange: #c1401e;
@@ -53,6 +53,9 @@ $hover-black: #1f2122;
 @import "blocks/footer.scss";
 @import "blocks/socials.scss";
 @import "blocks/address.scss";
+@import "blocks/hamburger.scss";
+@import "blocks/burgers.scss";
+@import "blocks/slider.scss";
 
 
 
