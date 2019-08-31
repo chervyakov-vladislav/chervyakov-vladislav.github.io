@@ -1890,6 +1890,8 @@ button {
   bottom: 0;
   right: 0;
   display: none;
+  position: fixed;
+  z-index: 2;
 }
 
 .hamburger__nav {
