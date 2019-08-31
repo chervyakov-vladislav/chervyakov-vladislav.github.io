@@ -1555,6 +1555,7 @@ button {
 .logo {
   width: 98.265px;
   height: 74.317px;
+  z-index: 3;
 }
 
 .arrow-scroll {
@@ -1892,6 +1893,7 @@ button {
   display: none;
   position: fixed;
   z-index: 2;
+  background-attachment: scroll;
 }
 
 .hamburger__nav {
