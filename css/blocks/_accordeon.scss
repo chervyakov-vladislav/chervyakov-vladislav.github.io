@@ -13,7 +13,6 @@
 
 .accordeon__item {
     color: #fff;
-    margin-bottom: rem(45px);
     transition: .3s;
 
     &:last-child {
@@ -41,9 +40,9 @@
     }
 
     .accordeon__desc {
-        height: 100%;
-        overflow: visible;
+        height: 150px;
         opacity: 1;
+        margin-bottom: 0;
 
         @include tablets() {
             flex-direction: column;
@@ -93,10 +92,9 @@
     display: flex;
     padding-top: rem(20px);
     height: 0;
-    overflow: hidden;
     opacity: 0;
     transition: .3s;
-    max-height: 100px;
+    margin-bottom: rem(45px);
 
     @include tablets() {
         max-height: 200px;

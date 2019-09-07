@@ -68,6 +68,7 @@
             color: #fff;
             @include ubuntu(light);
             font-size: 14px;
+            min-width: rem(475px);
         }
     }
 
@@ -80,7 +81,7 @@
     }
 
     .vertical-accordeon__wrap-content {
-        width: 100%;
+        width: 540px;
         transition: .3s;
     }
 }

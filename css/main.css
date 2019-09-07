@@ -1533,7 +1533,6 @@ button {
 
 .accordeon__item {
   color: #fff;
-  margin-bottom: 2.8125rem;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
@@ -1568,9 +1567,9 @@ button {
 }
 
 .accordeon_active .accordeon__desc {
-  height: 100%;
-  overflow: visible;
+  height: 150px;
   opacity: 1;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -1631,12 +1630,11 @@ button {
   display: flex;
   padding-top: 1.25rem;
   height: 0;
-  overflow: hidden;
   opacity: 0;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
-  max-height: 100px;
+  margin-bottom: 2.8125rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -1886,6 +1884,7 @@ button {
   font-family: "Ubuntu" , Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
+  min-width: 29.6875rem;
 }
 
 .vertical-accordeon__item_active {
@@ -1897,7 +1896,7 @@ button {
 }
 
 .vertical-accordeon__item_active .vertical-accordeon__wrap-content {
-  width: 100%;
+  width: 540px;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
