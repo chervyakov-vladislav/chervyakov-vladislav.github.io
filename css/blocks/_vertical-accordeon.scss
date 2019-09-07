@@ -69,6 +69,15 @@
             @include ubuntu(light);
             font-size: 14px;
             min-width: rem(475px);
+
+
+            @include tablets {
+                min-width: rem(300px);
+            }
+    
+            @include phones {
+                min-width: rem(190px);
+            }
         }
     }
 
@@ -83,5 +92,13 @@
     .vertical-accordeon__wrap-content {
         width: 540px;
         transition: .3s;
+
+        @include tablets {
+            width: 350px;
+        }
+
+        @include phones {
+            width: 240px;
+        }
     }
 }
