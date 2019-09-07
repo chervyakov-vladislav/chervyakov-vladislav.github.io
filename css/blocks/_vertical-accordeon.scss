@@ -8,6 +8,12 @@
         height: inherit;
     }
 
+    &__item {
+        transition: .3s;
+        max-width: 80px;
+        width: 100%;
+    }
+
     &__trigger {
         max-width: rem(80px);
         width: 100%;
@@ -68,11 +74,13 @@
 }
 
 .vertical-accordeon__item_active {
+    max-width: initial;
     .vertical-accordeon__title {
         color: $yellow;
     }
 
     .vertical-accordeon__wrap-content {
         width: 100%;
+        transition: .3s;
     }
 }

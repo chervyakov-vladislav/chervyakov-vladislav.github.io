@@ -13,7 +13,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: rem(110px) rem(90px);
+    align-items: center;
+    //padding: rem(110px) rem(90px);
 
     @include tablets() {
         width: 100%;

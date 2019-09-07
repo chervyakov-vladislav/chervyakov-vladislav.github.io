@@ -2,13 +2,31 @@
     position: relative;
 }
 
+.slider__cards {
+    display: flex;
+    overflow: hidden;
+}
+
+.slider__items {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    will-change: right;
+    transition: right 0.3s;
+}
+
 .slider__item {
     display: flex;
     position: relative;
+    flex: 1 0 100%;
+    max-width: 940px;
+    height: 100%;
 
     @include tablets() {
         flex-direction: column;
         align-items: center;
+        
     }
 }
 
@@ -19,8 +37,8 @@
 
 .slider__content_picture {
     display: flex;
-    height: 100%;
-    margin: auto;
+    margin: auto 0;
+    padding: 2%;
 
     @include tablets() {
         width: 60%;
@@ -29,7 +47,7 @@
 }
 
 .slider__desc {
-    margin-left: rem(20px);
+    margin: auto;
 
     @include phones() {
         &>.title {
@@ -105,7 +123,7 @@
 
 .slider__consist {
     position: absolute;
-    top: -15%;
+    top: 0%;
     left: 0;
     display: flex;
     z-index: 1;
@@ -210,7 +228,7 @@
 
 .slider__calory {
     position: absolute;
-    bottom: -15%;
+    bottom: 0%;
     left: 0;
     opacity: .5;
     @include gagalin;
@@ -255,6 +273,7 @@
 .slider__arrow {
     position: absolute;
     transition: .5s;
+    z-index: 2;
 
     &:first-child {
         top: 50%;

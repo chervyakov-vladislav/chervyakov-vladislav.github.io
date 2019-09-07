@@ -5,12 +5,16 @@
     @include tablets() {
         padding-top: rem(20px);
     }
+    justify-content: flex-start;
+    max-height: rem(450px);
+    height: 100%;
 }
 
 
 .accordeon__item {
     color: #fff;
-    margin-bottom: rem(35px);
+    margin-bottom: rem(45px);
+    transition: .3s;
 
     &:last-child {
         margin-bottom: 0;
@@ -18,6 +22,7 @@
 }
 
 .accordeon_active {
+    transition: .3s;
     
     .accordeon__title:before {
         transform: rotate(180deg);
@@ -26,17 +31,27 @@
 
     .accordeon__title {
         color: $yellow;
+
+        &:active {
+            &:before {
+                transform: rotate(150deg);
+                bottom: rem(5px);
+            }  
+        }
     }
 
     .accordeon__desc {
         height: 100%;
         overflow: visible;
+        opacity: 1;
 
         @include tablets() {
             flex-direction: column;
             align-items: center;
         }
     }
+
+    
 }
 
 .accordeon__title {
@@ -58,10 +73,19 @@
         bottom: 0;
         left: 0;
         transform: translateY(-100%);
+        transition: .2s;
     }
 
     &:hover {
         color: $yellow;
+    }
+
+    &:active {
+        &:before {
+            transform: rotate(-30deg);
+            bottom: rem(5px);
+        }
+        
     }
 }
 
@@ -70,6 +94,13 @@
     padding-top: rem(20px);
     height: 0;
     overflow: hidden;
+    opacity: 0;
+    transition: .3s;
+    max-height: 100px;
+
+    @include tablets() {
+        max-height: 200px;
+    }
 }
 
 .accordeon__img {
@@ -86,16 +117,14 @@
     }
 }
 
-.accordeon__text {
-    font-size: 14px;
-}
-
 .accordeon__subtitle {
     @include ubuntu(bold);
     margin-bottom: rem(10px);
 }
 
 .accordeon__text {
+    font-size: 14px;
+    max-width: rem(270px);
     @include ubuntu(light);
-    max-width: rem(220px);
+   
 }

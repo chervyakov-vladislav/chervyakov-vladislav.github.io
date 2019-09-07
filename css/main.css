@@ -530,6 +530,7 @@ button {
 
 .hero__content_picture {
   width: 100%;
+  position: relative;
 }
 
 @media screen and (max-width: 768px) {
@@ -557,9 +558,88 @@ button {
   }
 }
 
+.drops {
+  position: absolute;
+  left: 47%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation: fade 4s infinite;
+  animation: fade 4s infinite;
+  max-width: 100%;
+}
+
 @media screen and (max-width: 768px) {
-  .hero__pic {
+  .drops {
+    padding: 0 7%;
     max-width: 80%;
+    left: 48%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .drops {
+    max-width: 100%;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    fill: #E45028;
+    top: 42%;
+  }
+  15% {
+    fill: #F9B43B;
+  }
+  25% {
+    fill: #E45028;
+  }
+  45% {
+    fill: #F9B43B;
+  }
+  50% {
+    top: 37%;
+    fill: #E45028;
+  }
+  65% {
+    fill: #E45028;
+  }
+  75% {
+    fill: #F9B43B;
+  }
+  100% {
+    fill: #E45028;
+    top: 42%;
+  }
+}
+
+@keyframes fade {
+  0% {
+    fill: #E45028;
+    top: 42%;
+  }
+  15% {
+    fill: #F9B43B;
+  }
+  25% {
+    fill: #E45028;
+  }
+  45% {
+    fill: #F9B43B;
+  }
+  50% {
+    top: 37%;
+    fill: #E45028;
+  }
+  65% {
+    fill: #E45028;
+  }
+  75% {
+    fill: #F9B43B;
+  }
+  100% {
+    fill: #E45028;
+    top: 42%;
   }
 }
 
@@ -1417,7 +1497,9 @@ button {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 6.875rem 5.625rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -1436,6 +1518,11 @@ button {
   -ms-flex-direction: column;
   flex-direction: column;
   padding-top: 3.125rem;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  max-height: 28.125rem;
+  height: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -1446,11 +1533,20 @@ button {
 
 .accordeon__item {
   color: #fff;
-  margin-bottom: 2.1875rem;
+  margin-bottom: 2.8125rem;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .accordeon__item:last-child {
   margin-bottom: 0;
+}
+
+.accordeon_active {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .accordeon_active .accordeon__title:before {
@@ -1464,9 +1560,17 @@ button {
   color: #f9b43b;
 }
 
+.accordeon_active .accordeon__title:active:before {
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+  bottom: 0.3125rem;
+}
+
 .accordeon_active .accordeon__desc {
   height: 100%;
   overflow: visible;
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -1505,10 +1609,20 @@ button {
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
 }
 
 .accordeon__title:hover {
   color: #f9b43b;
+}
+
+.accordeon__title:active:before {
+  -webkit-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  bottom: 0.3125rem;
 }
 
 .accordeon__desc {
@@ -1518,6 +1632,17 @@ button {
   padding-top: 1.25rem;
   height: 0;
   overflow: hidden;
+  opacity: 0;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  max-height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .accordeon__desc {
+    max-height: 200px;
+  }
 }
 
 .accordeon__img {
@@ -1536,10 +1661,6 @@ button {
   }
 }
 
-.accordeon__text {
-  font-size: 14px;
-}
-
 .accordeon__subtitle {
   font-family: "Ubuntu" , Arial, sans-serif;
   font-weight: bold;
@@ -1547,9 +1668,10 @@ button {
 }
 
 .accordeon__text {
+  font-size: 14px;
+  max-width: 16.875rem;
   font-family: "Ubuntu" , Arial, sans-serif;
   font-weight: 300;
-  max-width: 13.75rem;
 }
 
 .logo {
@@ -1644,6 +1766,11 @@ button {
   height: 60.178px;
 }
 
+.drops {
+  width: 450.527px;
+  height: 241.369px;
+}
+
 .menu {
   background: url("./../img/bg/menu-bg.jpg") center center/cover no-repeat;
   position: relative;
@@ -1678,6 +1805,14 @@ button {
   display: -ms-flexbox;
   display: flex;
   height: inherit;
+}
+
+.vertical-accordeon__item {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  max-width: 80px;
+  width: 100%;
 }
 
 .vertical-accordeon__trigger {
@@ -1753,12 +1888,19 @@ button {
   font-size: 14px;
 }
 
+.vertical-accordeon__item_active {
+  max-width: initial;
+}
+
 .vertical-accordeon__item_active .vertical-accordeon__title {
   color: #f9b43b;
 }
 
 .vertical-accordeon__item_active .vertical-accordeon__wrap-content {
   width: 100%;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .contacts {
@@ -1978,11 +2120,40 @@ button {
   position: relative;
 }
 
+.slider__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.slider__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  will-change: right;
+  -webkit-transition: right 0.3s;
+  -o-transition: right 0.3s;
+  transition: right 0.3s;
+}
+
 .slider__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  max-width: 940px;
+  height: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -2006,8 +2177,8 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
-  margin: auto;
+  margin: auto 0;
+  padding: 2%;
 }
 
 @media screen and (max-width: 768px) {
@@ -2018,7 +2189,7 @@ button {
 }
 
 .slider__desc {
-  margin-left: 1.25rem;
+  margin: auto;
 }
 
 @media screen and (max-width: 480px) {
@@ -2104,7 +2275,7 @@ button {
 
 .slider__consist {
   position: absolute;
-  top: -15%;
+  top: 0%;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2232,7 +2403,7 @@ button {
 
 .slider__calory {
   position: absolute;
-  bottom: -15%;
+  bottom: 0%;
   left: 0;
   opacity: .5;
   font-family: "Gagalin" , Arial, sans-serif;
@@ -2291,6 +2462,7 @@ button {
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s;
+  z-index: 2;
 }
 
 .slider__arrow:first-child {

@@ -16,6 +16,7 @@
 
     &_picture {
         width: 100%;
+        position: relative;
 
         @include tablets() {
             padding: 0 20%;
@@ -33,9 +34,60 @@
     }
 }
 
-.hero__pic {
+.drops {
+    position: absolute;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    animation: fade 4s infinite;
+    max-width: 100%;
+
     @include tablets() {
+        padding: 0 7%;
         max-width: 80%;
+        left: 48%;
+    }
+
+    @include phones() {
+        max-width: 100%;
+    }
+}
+
+@keyframes fade {
+    0% {
+        fill: #E45028;
+        top: 42%;
+    }
+
+    15% {
+        fill: #F9B43B;
+    }
+
+    25% {
+        fill: #E45028;
+    }
+
+    45% {
+        fill: #F9B43B;
+    }
+
+    50% {
+        top: 37%;
+        fill: #E45028;
+    }
+
+
+    65% {
+        fill: #E45028;
+    }
+
+
+    75% {
+        fill: #F9B43B;
+    }
+
+    100% {
+        fill: #E45028;
+        top: 42%;
     }
 }
 
