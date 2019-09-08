@@ -1294,7 +1294,7 @@ button {
 }
 
 .form_margin {
-  margin-bottom: 0.6875rem;
+  margin-bottom: 0.9375rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -2187,9 +2187,8 @@ button {
   display: flex;
   position: relative;
   -webkit-box-flex: 1;
-  -ms-flex: 1 0 100%;
-  flex: 1 0 100%;
-  max-width: 940px;
+  -ms-flex: 1;
+  flex: 1;
   height: 100%;
 }
 
@@ -2202,6 +2201,7 @@ button {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    height: initial;
   }
 }
 
@@ -2227,6 +2227,12 @@ button {
 
 .slider__desc {
   margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .slider__desc {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 480px) {

@@ -19,13 +19,17 @@
 .slider__item {
     display: flex;
     position: relative;
-    flex: 1 0 100%;
-    max-width: 940px;
+    flex: 1;
+    //flex: 1 0 100%;
+    //max-width: 940px;
     height: 100%;
+
+
 
     @include tablets() {
         flex-direction: column;
         align-items: center;
+        height: initial;
         
     }
 }
@@ -48,6 +52,10 @@
 
 .slider__desc {
     margin: auto;
+
+    @include tablets() {
+        margin: 0;
+    }
 
     @include phones() {
         &>.title {

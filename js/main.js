@@ -63,13 +63,22 @@ for (i = 0; i < menuItem.length; i++) {
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");
 const items = document.querySelector(".slider__items");
+const item = document.querySelectorAll(".slider__item");
+const containerWidth = document.querySelector(".container");
 
+let itemsCount = items.childElementCount;
+const step = containerWidth.offsetWidth;
+const maxRight = step * (itemsCount - 1);
 const minRight = 0;
-const maxRight = 3760;
-const step = 940;
 let currentRight = 0;
 
+
+items.style.width = step * itemsCount + "px";
 items.style.right = currentRight;
+for (i=0; i < itemsCount; i++) {
+    item[i].style.width = containerWidth.offsetWidth + "px"; 
+}
+
 
 right.addEventListener("click", function(e) {
     e.preventDefault();
@@ -121,3 +130,4 @@ function createOverlay() {
 
   return overlayElement;
 }
+
