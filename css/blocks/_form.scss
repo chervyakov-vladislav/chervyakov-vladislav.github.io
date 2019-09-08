@@ -83,6 +83,7 @@
     outline-width: rem(2px);
     @include ubuntu(light);
     font-size: 14px;
+    margin-top: 5px;
 
     &_textarea {
         resize: none;
