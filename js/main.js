@@ -85,6 +85,8 @@ right.addEventListener("click", function(e) {
   if (currentRight < maxRight) {
     currentRight += step;
     items.style.right = currentRight + "px";
+  } else {
+    currentRight = minRight - step;
   }
 });
 
@@ -93,6 +95,8 @@ left.addEventListener("click", function(e) {
   if (currentRight > minRight) {
     currentRight -= step;
     items.style.right = currentRight + "px";
+  } else {
+    currentRight = maxRight + step;
   }
 });
 

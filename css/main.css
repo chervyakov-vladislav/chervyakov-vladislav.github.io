@@ -2202,6 +2202,7 @@ button {
     -ms-flex-align: center;
     align-items: center;
     height: initial;
+    max-height: 575px;
   }
 }
 
@@ -2344,7 +2345,6 @@ button {
   .slider__consist {
     bottom: initial;
     left: initial;
-    top: -5%;
     left: 10%;
   }
 }
@@ -2464,7 +2464,7 @@ button {
   .slider__calory {
     bottom: initial;
     left: initial;
-    top: -5%;
+    top: 0%;
     right: 10%;
   }
 }

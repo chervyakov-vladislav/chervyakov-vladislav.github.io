@@ -30,6 +30,7 @@
         flex-direction: column;
         align-items: center;
         height: initial;
+        max-height: 575px;
         
     }
 }
@@ -153,7 +154,6 @@
     @include tablets(){
         bottom: initial;
         left: initial;
-        top: -5%;
         left: 10%;
     }
 
@@ -250,7 +250,7 @@
     @include tablets(){
         bottom: initial;
         left: initial;
-        top: -5%;
+        top: 0%;
         right: 10%;
     }
 
