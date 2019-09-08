@@ -2176,9 +2176,9 @@ button {
   -ms-flex-align: center;
   align-items: center;
   will-change: right;
-  -webkit-transition: right 0.3s;
-  -o-transition: right 0.3s;
-  transition: right 0.3s;
+  -webkit-transition: right 0.5s;
+  -o-transition: right 0.5s;
+  transition: right 0.5s;
 }
 
 .slider__item {
@@ -2683,4 +2683,52 @@ button {
   transform: rotate(45deg);
   right: 3px;
   top: 15px;
+}
+
+.form-popup {
+  position: relative;
+  -webkit-animation: zoomIn .3s;
+  animation: zoomIn .3s;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px 20px;
+  max-width: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.form-popup__content {
+  color: #2f3234;
+}
+
+@media screen and (max-width: 480px) {
+  .form-popup__content {
+    width: 350px;
+    height: 300px;
+  }
+}
+
+.form-popup__title {
+  font-size: 14px;
+  font-family: "Gagalin" , Arial, sans-serif;
+  margin-bottom: 25px;
+}
+
+.form-popup__text {
+  font-size: 14px;
+  font-family: "Ubuntu" , Arial, sans-serif;
+  font-weight: 300;
+}
+
+.form-popup__btn {
+  max-width: 100px;
+  width: 100%;
+  margin: 20px auto 0;
+  text-align: center;
 }

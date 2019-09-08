@@ -1119,44 +1119,44 @@
                         <div class="form__column">
                             <div class="form__row">
                                 <label class="form__block">
-                                    <span class="form__block-title">Имя</span>
-                                    <input type="text" class="form__input" name="form__input">
+                                    <span class="form__block-title">Имя *</span>
+                                    <input type="text" class="form__input" name="name" required>
                                 </label>
                                 <label class="form__block">
-                                    <span class="form__block-title">Телефон</span>
-                                    <input type="tel" class="form__input" name="form__input">
+                                    <span class="form__block-title">Телефон *</span>
+                                    <input type="tel" class="form__input" name="phone" required>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <span class="form__block-title">Улица</span>
-                                    <input type="text" class="form__input" name="form__input">
+                                    <input type="text" class="form__input" name="street">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <span class="form__block-title">Дом</span>
-                                    <input type="text" class="form__input" name="form__input">
+                                    <input type="text" class="form__input" name="house-number">
                                 </label>
                                 <label class="form__block">
                                     <span class="form__block-title">Корпус</span>
-                                    <input type="text" class="form__input" name="form__input">
+                                    <input type="text" class="form__input" name="building">
                                 </label>
                                 <label class="form__block">
                                     <span class="form__block-title">Квартира</span>
-                                    <input type="text" class="form__input" name="form__input">
+                                    <input type="text" class="form__input" name="flat">
                                 </label>
                                 <label class="form__block">
                                     <span class="form__block-title">Этаж</span>
-                                    <input type="text" class="form__input" name="form__input">
+                                    <input type="text" class="form__input" name="floor">
                                 </label>
                             </div>
                         </div>
                         <div class="form__column">
                             <div class="form__row form_margin">
                                 <label class="form__block">
-                                    <span class="form__block-title">Комментарий</span>
-                                    <textarea class="form__input form__input_textarea"></textarea>
+                                    <span class="form__block-title">Комментарий *</span>
+                                    <textarea class="form__input form__input_textarea" name="comment" required></textarea>
                                 </label>
                             </div>
                             <div class="form__row form_margin">
@@ -1173,13 +1173,13 @@
                             </div>
                             <div class="form__row form_margin">
                                 <label class="form__checkbox">
-                                    <input class="form__checkbox_input" type="checkbox" name="checkbox"  checked>
+                                    <input class="form__checkbox_input" type="checkbox" name="callback"  checked>
                                     <span class="form__checkbox_check"></span>
                                     <span class="form__block-title">Не перезванивать</span>
                                 </label>
                             </div>
                             <div class="form__row form__btn">
-                                <button type="submit" class="btn">Заказать</button>
+                                <button type="submit" class="btn" id="sendButton">Заказать</button>
                                 <button type="reset" class="btn__clear">Очистить</button>
                             </div>
                         </div>
@@ -1262,6 +1262,15 @@
             <div class="popup__title"></div>
             <div class="popup__text"></div>
         </div>
+    </div>
+</script>    
+<script type="template" id="formTemplate">
+    <div class="form-popup">
+        <div class="form-popup__content">
+            <div class="form-popup__title"></div>
+            <div class="form-popup__text"></div>
+        </div>
+        <a href="#" class="btn form-popup__btn">Ok</a>
     </div>
 </script>    
 <script src="./js/main.js"></script>

@@ -86,7 +86,8 @@ right.addEventListener("click", function(e) {
     currentRight += step;
     items.style.right = currentRight + "px";
   } else {
-    currentRight = minRight - step;
+    currentRight = minRight;
+    items.style.right = currentRight + "px";
   }
 });
 
@@ -96,7 +97,8 @@ left.addEventListener("click", function(e) {
     currentRight -= step;
     items.style.right = currentRight + "px";
   } else {
-    currentRight = maxRight + step;
+    currentRight = maxRight;
+    items.style.right = currentRight + "px";
   }
 });
 
@@ -133,5 +135,105 @@ function createOverlay() {
   contentElement2.innerHTML = "Константин Спилберг";
 
   return overlayElement;
+}
+
+
+//form
+
+const myForm = document.querySelector('.form__elem');
+const sendButton = document.querySelector('#sendButton');
+
+var contentTitle = "";
+var contentText = "";
+var contentTextError = "Вы не ввели... ";
+
+
+
+sendButton.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    if (validateForm(myForm)) {
+        var formData = new FormData(myForm);
+        console.log(formData);
+        formData.append("name", myForm.elements.name.value);
+        console.log(formData);
+        formData.append("phone", myForm.elements.phone.value);
+        formData.append("comment", myForm.elements.comment.value);
+        formData.append("to", "vasya@petya.ru");
+        console.log(formData);
+        
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.send(JSON.formData);
+        // xhr.addEventListener('load', function() {
+        //     if (xhr.response.status == true) {
+        //         console.log('vse ok');
+        //     } else {
+        //         console.log('ne vse ok');
+        //     }
+            
+        // });
+
+    } else { 
+            contentTitle = "Упс... Ошибка";
+            contentText = contentTextError;
+            createMessage();
+            contentTextError = "Вы не ввели... ";
+    }
+})
+
+function validateForm(form) {
+    let valid = true;
+
+    if (!validateField(form.elements.name)) {
+        valid = false;
+        contentTextError = contentTextError + "Имя... ";
+    }
+
+    if (!validateField(form.elements.phone)) {
+        valid = false;
+        contentTextError = contentTextError + "Номер телефона... ";
+    }
+
+    if (!validateField(form.elements.comment)) {
+        valid = false;
+        contentTextError = contentTextError + "Комментарий... ";
+    }
+
+    return valid;
+} 
+
+function validateField(field) {
+    return field.checkValidity();
+}
+
+function createMessage() {
+    const successSend = createOverlay();
+    document.querySelector(".order").appendChild(successSend);
+    
+    function createOverlay() {
+        const overlayElement = document.createElement("div");
+        overlayElement.classList.add("overlay");
+        
+        const template = document.querySelector("#formTemplate");
+        overlayElement.innerHTML = template.innerHTML;
+        
+        const closeElement = overlayElement.querySelector(".form-popup__btn");
+        closeElement.addEventListener("click", function(e) {
+            e.preventDefault();     
+            document.querySelector(".order").removeChild(overlayElement);
+        });
+
+        const contentElement2 = overlayElement.querySelector(".form-popup__title");
+        contentElement2.innerHTML = contentTitle;
+        
+        
+        const contentElement1 = overlayElement.querySelector(".form-popup__text");
+        contentElement1.innerHTML = contentText;
+        
+        
+        return overlayElement;
+    }
 }
 

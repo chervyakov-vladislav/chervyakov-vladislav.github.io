@@ -1,0 +1,39 @@
+.form-popup {
+  position: relative;
+  animation: zoomIn .3s;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px 20px;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-popup__content {
+  
+  color: $black;
+
+  @include phones() {
+    width: 350px;
+    height: 300px;
+  }
+}
+
+.form-popup__title {
+  font-size: 14px;
+  @include gagalin();
+  margin-bottom: 25px;
+}
+
+.form-popup__text {
+  font-size: 14px;
+  @include ubuntu(light);
+}
+
+.form-popup__btn {
+  max-width: 100px;
+  width: 100%;
+  margin: 20px auto 0;
+  text-align: center;
+}
