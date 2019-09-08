@@ -86,3 +86,38 @@ left.addEventListener("click", function(e) {
     items.style.right = currentRight + "px";
   }
 });
+
+
+//popup
+
+
+const openButton = document.querySelectorAll(".reviews__btn");
+const successOverlay = createOverlay();
+
+for (i = 0; i < openButton.length; i++) {
+    openButton[i].addEventListener("click", function() {
+        document.querySelector(".reviews").appendChild(successOverlay);
+      });
+}
+
+function createOverlay() {
+  const overlayElement = document.createElement("div");
+  overlayElement.classList.add("overlay");
+
+  const template = document.querySelector("#reviewTemplate");
+  overlayElement.innerHTML = template.innerHTML;
+
+  const closeElement = overlayElement.querySelector(".popup__close");
+  closeElement.addEventListener("click", function(e) {
+    e.preventDefault();     
+    document.querySelector(".reviews").removeChild(overlayElement);
+  });
+
+  const contentElement1 = overlayElement.querySelector(".popup__text");
+  contentElement1.innerHTML = "Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.";
+
+  const contentElement2 = overlayElement.querySelector(".popup__title");
+  contentElement2.innerHTML = "Константин Спилберг";
+
+  return overlayElement;
+}

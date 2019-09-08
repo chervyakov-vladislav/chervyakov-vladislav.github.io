@@ -1,0 +1,88 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(#444, .92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup {
+  position: relative;
+  animation: zoomIn .3s;
+}
+
+.popup__content {
+  width: 460px;
+  height: 230px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px 20px;
+  color: $black;
+
+  @include phones() {
+    width: 350px;
+    height: 300px;
+  }
+}
+
+.popup__title {
+  font-size: 14px;
+  @include gagalin();
+  margin-bottom: 25px;
+}
+
+.popup__text {
+  font-size: 14px;
+  @include ubuntu(light);
+}
+
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
+.popup__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 4px;
+      border-radius: 3px;
+      background: #eb8364;
+      transform: rotate(-45deg);
+      right: 3px;
+      top: 15px;
+    }
+
+  &:after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 4px;
+      border-radius: 3px;
+      background: #eb8364;
+      transform: rotate(45deg);
+      right: 3px;
+      top: 15px;
+    }
+}
