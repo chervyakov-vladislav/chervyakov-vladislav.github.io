@@ -8,16 +8,18 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  @include phones() {
+    margin: 2%;
+  }
+
 }
 
 .form-popup__content {
   
   color: $black;
 
-  @include phones() {
-    width: 350px;
-    height: 300px;
-  }
+  
 }
 
 .form-popup__title {

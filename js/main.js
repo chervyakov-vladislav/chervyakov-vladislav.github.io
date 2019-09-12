@@ -165,15 +165,23 @@ sendButton.addEventListener("click", function(e) {
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-        xhr.send(JSON.formData);
-        // xhr.addEventListener('load', function() {
-        //     if (xhr.response.status == true) {
-        //         console.log('vse ok');
-        //     } else {
-        //         console.log('ne vse ok');
-        //     }
+        xhr.send(formData);
+        xhr.addEventListener('load', function() {
+            if (xhr.response.status == true) {
+                contentTitle = "Отлично!";
+                contentText = "Заказ оформлен";
+                createMessage();
+                contentTitle = "";
+                contentText = "";
+            } else {
+                contentTitle = "Ошибка";
+                contentText = "Сервер не отвечает";
+                createMessage();
+                contentTitle = "";
+                contentText = "";
+            }
             
-        // });
+        });
 
     } else { 
             contentTitle = "Упс... Ошибка";

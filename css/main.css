@@ -2703,15 +2703,14 @@ button {
   flex-direction: column;
 }
 
-.form-popup__content {
-  color: #2f3234;
+@media screen and (max-width: 480px) {
+  .form-popup {
+    margin: 2%;
+  }
 }
 
-@media screen and (max-width: 480px) {
-  .form-popup__content {
-    width: 350px;
-    height: 300px;
-  }
+.form-popup__content {
+  color: #2f3234;
 }
 
 .form-popup__title {
