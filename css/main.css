@@ -2731,3 +2731,60 @@ button {
   margin: 20px auto 0;
   text-align: center;
 }
+
+.slider__dots {
+  width: 940px;
+  height: 75px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1080px) {
+  .slider__dots {
+    display: none;
+  }
+}
+
+.slider__dots_img {
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 30px;
+  opacity: .6;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.slider__dots_img:last-child {
+  margin-right: 0;
+}
+
+.slider__dots_img:hover {
+  opacity: 1;
+}
+
+.slider__dots_active {
+  opacity: 1;
+}
+
+.slider__dots_pic {
+  background: center center / cover no-repeat;
+}
