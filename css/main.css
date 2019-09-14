@@ -426,13 +426,25 @@ body {
   color: #2f3234;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  position: relative;
+  -webkit-transition: -webkit-transform .8s;
+  transition: -webkit-transform .8s;
+  -o-transition: transform .8s;
+  transition: transform .8s;
+  transition: transform .8s, -webkit-transform .8s;
 }
 
 .container {
@@ -485,7 +497,7 @@ button {
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1132,6 +1144,10 @@ button {
   }
 }
 
+.reviews {
+  position: relative;
+}
+
 .reviews__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1234,6 +1250,7 @@ button {
 .order {
   background: url("./../img/bg/order-bg.jpg") center center/cover no-repeat;
   color: #fff;
+  position: relative;
 }
 
 .form__elem {
@@ -1461,6 +1478,10 @@ button {
   border: 1px solid transparent;
   margin-bottom: 0.4375rem;
   position: relative;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }
 
 .fixed-menu__item:last-child {
@@ -1481,7 +1502,7 @@ button {
   transform: translate(-50%, -50%);
 }
 
-.fixed-menu__active {
+.fixed-menu > .section_active {
   border: 1px solid #fff;
 }
 
@@ -2575,7 +2596,7 @@ button {
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -2746,6 +2767,7 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1080px) {
@@ -2767,6 +2789,7 @@ button {
   -ms-flex-align: center;
   align-items: center;
   margin-right: 30px;
+  cursor: pointer;
   opacity: .6;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -2778,10 +2801,6 @@ button {
 }
 
 .slider__dots_img:hover {
-  opacity: 1;
-}
-
-.slider__dots_active {
   opacity: 1;
 }
 

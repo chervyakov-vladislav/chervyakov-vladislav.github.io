@@ -132,6 +132,9 @@ $(function () {
             .addClass('.slider__dots_active')
             .siblings()
             .removeClass('.slider__dots_active');
+        $('.slider')
+            .find('.slider__dots_active')
+            .css('opacity', '1');
     }
 
     var generateDots = function() {
@@ -207,6 +210,121 @@ $(function () {
 
     });
 
+//one page scroll
+
+const sections = $('.section');
+const display = $('.maincontent');
+let inScroll = false;
+
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+const countPosition = function(sectionEq) {
+    return  `${sectionEq * (-100)}%`;
+};
+
+const switchActiveClass = function(elems, elemEq) {
+    elems
+        .eq(elemEq)
+        .addClass('section_active')
+        .siblings()
+        .removeClass('section_active');
+};
+
+const unBlockScroll = function() {
+    setTimeout(function() {
+        inScroll = false;
+    }, 900); // + время против ложного срабатывания
+};
+
+const performTransition = function(sectionEq) {
+    if (inScroll == false) {
+        inScroll = true;
+        const position = countPosition(sectionEq);
+        const switchFixedMenuActiveClass = function() {
+            switchActiveClass($('.fixed-menu__item'), sectionEq);
+        };
+        switchFixedMenuActiveClass();
+        switchActiveClass(sections, sectionEq);
+
+        display.css({
+            transform : `translateY(${position})`
+        });
+
+        unBlockScroll();
+    }
+    
+};
+
+const scrollViewport = function (direction) {
+    const activeSection = sections.filter('.section_active');
+    const nextSection = activeSection.next();
+    const prevSection = activeSection.prev();
+
+    if (direction == 'next' && nextSection.length) {
+        performTransition(nextSection.index());
+    }
+    if (direction == 'prev' && prevSection.length) {
+        performTransition(prevSection.index());
+    }
+}
+
+$(document).on('wheel', function(e) {
+    const deltaY = e.originalEvent.deltaY;
+    
+    if (deltaY > 0) {
+        scrollViewport("next");
+    } else {
+        scrollViewport("prev");
+    }
+});
+
+$(document).on('keydown', function(e){
+    const tagName = e.target.tagName.toLowerCase();
+    const userTypingInIntuts = tagName == 'input' || tagName == 'textarea';
+
+    if (!userTypingInIntuts) {
+        switch(e.keyCode) {
+            case 38 : scrollViewport('prev');
+            break;
+            case 40 : scrollViewport('next');
+            break;
+        }
+    }  
+});
+
+
+
+$('[data-scroll-to]').on('click', function(e){
+    e.preventDefault();
+
+    const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+
+    performTransition(target);
+});
+
+if (isMobile){
+
+    window.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, {passive: false});
+
+    $('body').swipe({
+
+        swipe: function(event, direction) {
+            let scrollDirection;
+    
+            if (direction == 'up') scrollDirection = 'next';
+            if (direction == 'down') scrollDirection = 'prev';
+    
+            scrollViewport(scrollDirection);
+        }
+    
+    });
+
+
+} 
+
 });
 
 
@@ -218,7 +336,7 @@ const successOverlay = createOverlay();
 
 for (i = 0; i < openButton.length; i++) {
     openButton[i].addEventListener("click", function() {
-        document.querySelector(".reviews").appendChild(successOverlay);
+        document.querySelector(".section_active").appendChild(successOverlay);
       });
 }
 

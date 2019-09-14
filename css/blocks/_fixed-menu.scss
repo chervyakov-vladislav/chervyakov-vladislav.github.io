@@ -3,6 +3,7 @@
     top:rem(95px);
     right: rem(100px);
     
+    
     @include laptop {
         display: none;
     }
@@ -16,6 +17,8 @@
     border: 1px solid transparent;
     margin-bottom: rem(7px);
     position: relative;
+    cursor: pointer;
+    transition: .5s;
 
     &:last-child {
         margin-bottom: 0;
@@ -34,6 +37,11 @@
     }
 }
 
-.fixed-menu__active {
-    border: 1px solid #fff;
+.fixed-menu {
+    &>.section_active {
+        border: 1px solid #fff;
+    }
 }
+// .fixed-menu__active {
+    
+// }
