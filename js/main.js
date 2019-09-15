@@ -583,5 +583,91 @@ function onYouTubeIframeAPIReady() {
 eventsInit();
 
 
+// map
+
+ymaps.ready(init);
+
+var placemarks = [
+    {
+        latitude: 59.95,
+        longitude: 30.38,
+        hintContent: '<div class = "map__hint">mr. Burger</div>',
+        balloonContent: '<div class = "map__balloon">Таврический переулок 5</div>'
+    },
+    {
+        latitude: 59.92,
+        longitude: 30.30,
+        hintContent: '<div class = "map__hint">mr. Burger</div>',
+        balloonContent: '<div class = "map__balloon">наб. Крюкова канала 10</div>'
+    }
+],
+    geoObjects= [];
+
+
+function init() {
+    var map = new ymaps.Map('map', {
+        center: [59.94, 30.32],
+        zoom: 12, 
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+
+    });
+
+    for (var i = 0; i < placemarks.length; i++) {
+        geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+        {
+            hintContent: placemarks[i].hintContent,
+            balloonContent: placemarks[i].balloonContent
+        },
+        {
+            iconLayout: 'default#image',
+            iconImageHref: './../img/icons/map-marker.svg',
+            iconImageSize: [46, 57],
+            iconImageOffset: [-23, -57]
+        });
+    
+    
+    }
+    
+
+    var clusterer = new ymaps.Clusterer({
+        clusterIcons: [
+            {
+                href: './../img/icons/map-marker.svg',
+                size: [50, 50],
+                offset: [-25, -50]
+            }
+        ],
+        clusterIconContentLayout: null
+    });
+
+    map.geoObjects.add(clusterer);
+    clusterer.add(geoObjects);
+    // var placemark1 = new ymaps.Placemark([59.92, 30.30], {
+    //     hintContent: '<div class = "map__hint">mr. Burger</div>',
+    //     balloonContent: '<div class = "map__balloon">наб. Крюкова канала 10</div>'
+    // },
+    // {
+    //     iconLayout: 'default#image',
+    //     iconImageHref: './../img/icons/map-marker.svg',
+    //     iconImageSize:[46, 57],
+    //     iconImageOffset: [-23,-57]
+    // });
+    // map.geoObjects.add(placemark1);
+
+    // var placemark2 = new ymaps.Placemark([59.95, 30.38], {
+    //     hintContent: '<div class = "map__hint">mr. Burger</div>',
+    //     balloonContent: '<div class = "map__balloon">Таврический переулок 5</div>'
+    // },
+    // {
+    //     iconLayout: 'default#image',
+    //     iconImageHref: './../img/icons/map-marker.svg',
+    //     iconImageSize:[46, 57],
+    //     iconImageOffset: [-23,-57]
+    // });
+    // map.geoObjects.add(placemark2);
+   
+
+}
 
 
