@@ -2628,4 +2628,12 @@
         </g>
     </symbol>
     
+    <symbol id="play"  viewBox="0 0 300 300" >
+        <g>
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="inherit" class="st0" d="M196.1,139.6l-91-72.5c-8.7-6.9-21.5-0.7-21.5,10.4v145c0,11.1,12.8,17.3,21.5,10.4l91-72.5
+                C202.8,155.1,202.8,144.9,196.1,139.6z"/>
+        </g>
+    </symbol>
+
+
 </svg>
