@@ -2809,6 +2809,10 @@ button {
   opacity: 1;
 }
 
+.slider__dots_active {
+  opacity: 1;
+}
+
 .slider__dots_pic {
   background: center center / cover no-repeat;
 }

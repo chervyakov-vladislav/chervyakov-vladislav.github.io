@@ -129,12 +129,9 @@ $(function () {
         $('.slider')
             .find('.slider__dots_img')
             .eq(index)
-            .addClass('.slider__dots_active')
+            .addClass('slider__dots_active')
             .siblings()
-            .removeClass('.slider__dots_active');
-        $('.slider')
-            .find('.slider__dots_active')
-            .css('opacity', '1');
+            .removeClass('slider__dots_active');
     }
 
     var generateDots = function() {
@@ -541,14 +538,6 @@ const eventsInit = () => {
 
 const onPlayerStateChange = event => {
   const playerButton = $(".player__start");
-  /*
-  -1 (воспроизведение видео не начато)
-  0 (воспроизведение видео завершено)
-  1 (воспроизведение)
-  2 (пауза)
-  3 (буферизация)
-  5 (видео подают реплики).
-   */
   switch (event.data) {
     case 1: 
       $('.player__wrapper').addClass('active');
