@@ -1,0 +1,130 @@
+.accordeon {
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(50px);
+    @include tablets() {
+        padding-top: rem(20px);
+    }
+    justify-content: flex-start;
+    max-height: rem(450px);
+    height: 100%;
+}
+
+
+.accordeon__item {
+    color: #fff;
+    transition: .3s;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.accordeon_active {
+    transition: .3s;
+    
+    .accordeon__title:before {
+        transform: rotate(180deg);
+        bottom: rem(5px);
+    }
+
+    .accordeon__title {
+        color: $yellow;
+
+        &:active {
+            &:before {
+                transform: rotate(150deg);
+                bottom: rem(5px);
+            }  
+        }
+    }
+
+    .accordeon__desc {
+        height: 150px;
+        opacity: 1;
+        margin-bottom: 0;
+
+        @include tablets() {
+            flex-direction: column;
+            align-items: center;
+            height: 200px;
+        }
+    }
+
+    
+}
+
+.accordeon__title {
+    @include gagalin();
+    font-size: 14px;
+    text-decoration: none;
+    padding-left: rem(20px);
+    position: relative;
+    transition: .3s;
+    
+    &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid $yellow;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(-100%);
+        transition: .2s;
+    }
+
+    &:hover {
+        color: $yellow;
+    }
+
+    &:active {
+        &:before {
+            transform: rotate(-30deg);
+            bottom: rem(5px);
+        }
+        
+    }
+}
+
+.accordeon__desc {
+    display: flex;
+    padding-top: rem(20px);
+    height: 0;
+    opacity: 0;
+    transition: .3s ease-out;
+    transition-delay: 0.2s;
+    margin-bottom: rem(45px);
+
+    @include tablets() {
+        max-height: 200px;
+    }
+}
+
+.accordeon__img {
+    max-width: rem(100px);
+    width: 100%;
+    height: rem(100px);
+    border-radius: 50%;
+    background: url('./../img/content/team/aphex.jpg') center center / cover no-repeat;
+    margin-right: rem(20px);
+
+    @include tablets() {
+        margin: 0;
+        margin-bottom: rem(10px);
+    }
+}
+
+.accordeon__subtitle {
+    @include ubuntu(bold);
+    margin-bottom: rem(10px);
+}
+
+.accordeon__text {
+    font-size: 14px;
+    max-width: rem(270px);
+    @include ubuntu(light);
+   
+}

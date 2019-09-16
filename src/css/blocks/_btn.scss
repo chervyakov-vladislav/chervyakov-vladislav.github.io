@@ -1,0 +1,119 @@
+.btn {
+    display: inline-block;
+    padding: rem(10px) rem(16px);
+    border-radius: rem(5px);
+    background: $red;
+    text-transform: uppercase;
+    color: #fff;
+    @include ubuntu(medium);
+    font-size: 13px;
+    transition: .5s;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1em;
+        height: 100%;
+        background: rgba(#fff, .6);
+        transform: translateX(-4em) skewX(-45deg);
+    }
+
+    @keyframes light {
+        from {
+            transform: translateX(-4em) skewX(-45deg);
+        }
+        to {
+            transform: translateX(10em) skewX(-45deg);
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        &:before {
+            animation: light .7s;
+        }
+        background: $hover-orange;
+        transition: .5s;
+    }
+
+    &__clear {
+        @include ubuntu(light);
+        font-size: 14px;
+        margin-left: rem(20px);
+        transition: .5s;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            color: $red;  
+        }
+    }
+
+    &__black {
+        background: #2f3234;
+
+        @include tablets {
+            margin: 0 auto;
+        }
+
+        &:hover {
+            background: $hover-black;  
+        }
+
+        &_desktop {
+            display: block;
+
+            @include phones {
+                display: none;
+            }
+
+        }
+
+        &_mobile {
+            display: none;
+
+            @include phones {
+                display: block;
+            }
+        }
+    }
+
+    &_anchor {
+        display: block;
+    }
+}
+
+.btn__close {
+    display: none;
+
+    @include tablets() {
+        display: block;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 4px;
+        border-radius: 3px;
+        background: #eb8364;
+        transform: rotate(-45deg);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 4px;
+        border-radius: 3px;
+        background: #eb8364;
+        transform: rotate(45deg);
+    }
+}

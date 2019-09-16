@@ -1,0 +1,15 @@
+.map {
+  height: 100%;
+}
+
+.map__hint {
+  @include gagalin();
+  font-size: 14px;
+  color: $red;
+}
+
+.map__balloon {
+  @include ubuntu(medium);
+  font-size: 14px;
+  color: $red;
+}

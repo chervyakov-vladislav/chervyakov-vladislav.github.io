@@ -1,0 +1,12 @@
+{
+  "tasks" : {
+    "clean" : "./config/tasks/clean.js",
+    "copy:html" : "./config/tasks/copy.html.js",
+    "copy:images" : "./config/tasks/copy.img.js",
+    "copy:fonts" : "./config/tasks/copy.fonts.js",
+    "copy:js" : "./config/tasks/copy.js.js",
+    "server" : "./config/tasks/server.js",
+    "watch" : "./config/tasks/watch.js",
+    "scss" : "./config/tasks/scss.js"
+  }
+}

@@ -1,0 +1,83 @@
+.menu {
+    background: url('./../img/bg/menu-bg.jpg') center center / cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__title {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+
+    @include tablets {
+        top: 15%;
+    }
+}
+
+// .menu__nav {
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     height: 100%;
+//     max-width: 65%;
+// }
+
+// .menu__list {
+//     display: flex;
+//     height: 100%;
+    
+// }
+
+// .menu__item {
+//     display: flex;
+
+//     &_active {
+//         .menu__item_text {
+//             overflow: visible;
+//             width: 100%;
+//             padding: rem(60px) rem(35px);
+//         }
+//         .menu__item_title {
+//             color: $yellow;
+//         }
+//     }
+// }
+
+// .menu__item_title {
+//     writing-mode: vertical-lr;
+//     transform: rotate(180deg); 
+//     color: #fff;
+//     @include gagalin();
+//     background: right center / cover no-repeat;
+//     font-size: rem(40px);
+//     margin: 0;
+//     text-align: center;
+//     max-width: rem(80px);
+//     width: 100%;
+//     align-items: center;
+//     display: block;
+//     position: relative;
+
+//     &:before {
+//         content: '';
+//         background: rgba(#141414, .7);
+//         width: 100%;
+//         height: 100%;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         z-index: -1;
+//     }
+// }
+
+// .menu__item_text {
+//     overflow: hidden;
+//     width: 0;
+//     color: #fff;
+//     background: rgba(#2f3234, .93);
+//     @include ubuntu(light);
+//     font-size: rem(14px);
+// }

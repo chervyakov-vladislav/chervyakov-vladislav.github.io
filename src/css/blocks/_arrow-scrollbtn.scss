@@ -1,0 +1,19 @@
+.arrow-scrollbtn {
+    max-width: 100%;
+    width: rem(29px);
+    height: rem(14px);
+    display: block;
+    position: absolute;
+    bottom: rem(50px);
+    // background: url(../img/icons/arrow-scroll.svg) center center / contain no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    &:focus {
+        outline: none;
+    }
+    transition: .5s;
+    &:hover {
+        bottom: rem(45px);
+        transition: .5s;
+    }
+}
