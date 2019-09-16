@@ -1,1 +1,1 @@
-# chervyakov-vladislav.github.io
+# chervyakov-vladislav.github.io/dist/
