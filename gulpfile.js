@@ -30,11 +30,11 @@ $.gulp.task('default',
       'copy:images',
       'copy:fonts',
       'copy:js',
-      'scss',
-      'watch',
-      'server'
-    )
-    
+      'scss'
+      
+    ),
+    'server',
+    'watch'
     )
 )
 

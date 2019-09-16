@@ -322,6 +322,12 @@ if (isMobile){
 
 } 
 
+$('.fixed-menu').on('click' , '.fixed-menu__item', function() {
+    var $this = $(this),
+    index = $this.index();
+    performTransition(index);
+    switchActiveClass($('.fixed-menu__item'), index);
+});
 
 
 });

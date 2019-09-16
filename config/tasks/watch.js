@@ -7,6 +7,8 @@ module.exports = () => {
       .on('change', $.bSync.reload)
     $.gulp.watch('./src/fonts/*.*', $.gulp.series('copy:fonts'))
       .on('change', $.bSync.reload)
+    $.gulp.watch('./src/js/*.*', $.gulp.series('copy:js'))
+      .on('change', $.bSync.reload)
   })
 
 }
